@@ -35,10 +35,12 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     @JsonIgnore
+    @Builder.Default
     private List<Activity> activities = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     @JsonIgnore
+    @Builder.Default
     private List<Recommendation> recommendations = new ArrayList<>();
 
 }
